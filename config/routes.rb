@@ -1,7 +1,9 @@
 Railspotting::Application.routes.draw do
   root :to => 'site#index'
   
-  match '/map' => 'site#map', :as => :map
+  match '/map' => 'site#map'
+  
+  match '/api/:action', :controller => 'api'
    
   # The priority is based upon order of creation:
   # first created -> highest priority.

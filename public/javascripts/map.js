@@ -20,11 +20,10 @@
         
     //Data
     $.ajax({
-        url: 'http://cabspotting.org/cabs.xml.php?m=60',
-        success: function(xhr) {
-            console.log(xhr)
-            //var json = xml2json.parser(xhr.responseText);
-            //console.dir(json);
+        url: '/api/cab?cab=ojroigna',
+        dataType: 'json',
+        success: function(json) {
+            console.dir(json);
         }
     });
 })(jQuery);

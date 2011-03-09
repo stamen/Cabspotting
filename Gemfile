@@ -10,7 +10,6 @@ gem 'haml'
 gem 'mustache'
 gem 'mustache_rails3'
 
-
 # Use unicorn as the web server
 # gem 'unicorn'
 
