@@ -1,0 +1,169 @@
+html {
+  overflow-y: scroll;
+}
+
+html, body {
+  position: relative;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+h1, h2 {
+  color: #ddf;
+  font-size: 150%;
+  margin: 1em 0;
+}
+
+h3 {
+  color: #ddf;
+  font-size: 125%;
+  margin: 1em 0 0.5em;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 1em;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #eee;
+}
+
+ul {
+  padding: 0;
+  list-style-position: inside;
+}
+
+li {
+  margin-bottom: 7px;
+}
+
+.clearfix {
+  min-height: 0
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+#map-frame {
+  border: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#frame {
+  position: relative;
+  bottom: 0;
+  z-index: 2;
+  width: 800px;
+  margin: 0 auto;
+}
+
+#menu, #content {
+  color: white;
+  background: black;
+  opacity: 0.8;
+}
+
+#menu {
+  padding: 15px 20px 7px;
+  margin-bottom: 2px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-bottomright: 4px;
+}
+
+#menu > a {
+  display: block;
+  float: left;
+  text-decoration: none;
+  padding: 0 1em;
+}
+
+#menu > a:hover {
+  text-decoration: underline;
+}
+
+#menu > .home {
+  font-size: 150%;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+#menu > .home a {
+  color: #ff0;
+  text-decoration: none;
+}
+
+.close {
+  cursor: pointer;
+  color: #ff0;
+  background: black;
+  display: block;
+  text-align: center;
+  width: 20px;
+  padding: 5px 4px 3px 5px;
+  position: absolute;
+  top: 0;
+  left: -32px;
+  -moz-border-radius: 4px;
+}
+
+#menu .partners {
+  display: block;
+  float: right;
+  line-height: 20px;
+}
+
+#menu .partners a {
+  color: #ff0;
+}
+
+#content {
+  position: relative;
+  display: none;
+  padding: 0 20px;
+  -moz-border-radius: 4px;
+  line-height: 1.4;
+}
+
+#content .section {
+  float: left;
+}
+
+/* h1 outside of columns requires less bottom margin */
+#content .section > h1 {
+  margin-bottom: 0;
+}
+
+#content .left,
+#content .right {
+  width: 370px;
+  float: left;
+}
+
+#content .left {
+  padding-right: 10px;
+}
+
+#content .right {
+  padding-left: 10px;
+}
+
+.caption {
+  font-style: italic;
+}
