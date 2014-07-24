@@ -1,0 +1,23 @@
+<div class="section clearfix" data-href="/about">
+  <div class="left">
+    <h1>About Cabspotting</h1>
+    <p>Cabspotting traces San Francisco's taxi cabs as they travel throughout the Bay Area. The patterns traced by each cab create a living and always-changing map of city life. This map hints at economic, social, and cultural trends that are otherwise invisible. The Exploratorium has invited artists and researchers to use this information to reveal these "Invisible Dynamics."</p>
+
+    <p>The core of this project is the Cab Tracker. The Tracker averages the last four hours of cab routes into a ghostly image, and then draws the routes of ten in-progress cab rides over it.</p>
+
+    <p>The Time Lapse area of the project reveals time-varying patterns such as rush hour, traffic jams, holidays and unusual events. New projects are produced by the Exploratorium's visiting artists and also created by the larger Cabspotting community.</p>
+
+    <h2>Motivation</h2>
+    <p>The Exploratorium is involved in a multi-year project to explore alternate views of the Bay Area's infrastructure. Entitled Invisible Dynamics, the project hopes to reveal radically surprising and inspiring views of the systems interconnecting the communities of the Bay. We are already familiar with the dominant street-map view of our city. This project will reveal other ways of seeing our environment, such as the view of the sewer infrastructure; the flow of water; the commercial activity of boats, trucks and planes; or the ecological activities of the marshes and wetlands surrounding the bay.</p>
+
+    <p>Cabspotting is designed as a living framework to use the activity of commercial cabs as a starting point to explore the economic, social, political and cultural issues that are revealed by the cab traces. Where do cabs go the most? Where do they never turn up? Cab Projects are vehicles for artists, writers, or researchers to explore these issues in the form of a small experiment, investigation or observation. These projects will be included on an ever-growing Cabspotting site to form a continually expanding view of the anthropological record created by this system.</p>
+  </div>
+
+  <div class="right">
+    <h2>Projects</h2>
+    <p>Cab Projects are commissioned regularly by the Exploratorium. A project is generally a single web page that demonstrates a particular view on the data. This could be as simple as the story of a single ride, documented in images and audio and accompanying the Cabspotting trace. Other projects can incorporate statistical analysis of the data looking for larger patterns. And finally, the API is accessible to other developers who would like to create their own unique client to visualize the cab data in an alternate form. For information on writing to the API, please contact info@stamen.com. People outside of the Exploratorium are invited also to create and submit projects to this site which will be included at the webmaster's discretion (info@stamen.com).</p>
+
+    <h2>Technical Information</h2>
+    <p>Many cab companies, including San Francisco's Yellow Cab, outfit their cabs with GPS to aid in rapidly dispatching cabs to their customers. Each San Francisco based Yellow Cab vehicle is currently outfitted with a GPS tracking device that is used by dispatchers to efficiently reach customers. The data is transmitted from each cab to a central receiving station, and then delivered in real-time to dispatch computers via a central server. This system broadcasts the cab call number, location and whether the cab currently has a fare. The cab locations are not stored by Yellow Cab, but only used in real-time to aid dispatch. Our system talks to the Yellow Cab server and stores the data in a database, encoding the call number for privacy. Server-side processes computer the aggregate map at various time intervals (10 minute, 1 hour, 8 hours, etc.) and store these frames as Postscript and bitmap images. These are subsequently combined into movies for every day, week, etc. Images and movies can be queried by visitors to the site in the Time Lapse area. A sample of real-time data overlaid on the most recent map can be seen in the Cab Tracker client.</p>
+  </div>
+</div>

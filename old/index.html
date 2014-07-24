@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cabspotting</title>
+  <link rel="stylesheet" href="cabspotting.css" />
+</head>
+<body>
+  <div id="frame">
+    <div id="menu" class="clearfix">
+      <div class="home">
+        <a href="/">Cabspotting</a>
+      </div>
+      <a href="/about">About</a>
+      <a href="/faq">FAQ</a>
+      <a href="/projects">Artist Projects</a>
+
+      <small class="partners">Brought to you by <a href="#">The Exploratorium</a>, <a href="#">Yellow Cab</a>, and <a href="#">Stamen Design</a></small>
+    </div>
+
+    <div id="content" class="clearfix">
+      <!-- <a class="close">&#9650;</a> -->
+      <a class="close">X</a>
+      
+      <!-- ABOUT -->
+      <div class="section clearfix" data-href="/about">
+        <div class="left">
+          <h1>About Cabspotting</h1>
+          <p>Cabspotting traces San Francisco's taxi cabs as they travel throughout the Bay Area. The patterns traced by each cab create a living and always-changing map of city life. This map hints at economic, social, and cultural trends that are otherwise invisible. The Exploratorium has invited artists and researchers to use this information to reveal these "Invisible Dynamics."</p>
+
+          <p>The core of this project is the Cab Tracker. The Tracker averages the last four hours of cab routes into a ghostly image, and then draws the routes of ten in-progress cab rides over it.</p>
+
+          <p>The Time Lapse area of the project reveals time-varying patterns such as rush hour, traffic jams, holidays and unusual events. New projects are produced by the Exploratorium's visiting artists and also created by the larger Cabspotting community.</p>
+
+          <h2>Motivation</h2>
+          <p>The Exploratorium is involved in a multi-year project to explore alternate views of the Bay Area's infrastructure. Entitled Invisible Dynamics, the project hopes to reveal radically surprising and inspiring views of the systems interconnecting the communities of the Bay. We are already familiar with the dominant street-map view of our city. This project will reveal other ways of seeing our environment, such as the view of the sewer infrastructure; the flow of water; the commercial activity of boats, trucks and planes; or the ecological activities of the marshes and wetlands surrounding the bay.</p>
+
+          <p>Cabspotting is designed as a living framework to use the activity of commercial cabs as a starting point to explore the economic, social, political and cultural issues that are revealed by the cab traces. Where do cabs go the most? Where do they never turn up? Cab Projects are vehicles for artists, writers, or researchers to explore these issues in the form of a small experiment, investigation or observation. These projects will be included on an ever-growing Cabspotting site to form a continually expanding view of the anthropological record created by this system.</p>
+        </div>
+
+        <div class="right">
+          <h2>Projects</h2>
+          <p>Cab Projects are commissioned regularly by the Exploratorium. A project is generally a single web page that demonstrates a particular view on the data. This could be as simple as the story of a single ride, documented in images and audio and accompanying the Cabspotting trace. Other projects can incorporate statistical analysis of the data looking for larger patterns. And finally, the API is accessible to other developers who would like to create their own unique client to visualize the cab data in an alternate form. For information on writing to the API, please contact info@stamen.com. People outside of the Exploratorium are invited also to create and submit projects to this site which will be included at the webmaster's discretion (info@stamen.com).</p>
+
+          <h2>Technical Information</h2>
+          <p>Many cab companies, including San Francisco's Yellow Cab, outfit their cabs with GPS to aid in rapidly dispatching cabs to their customers. Each San Francisco based Yellow Cab vehicle is currently outfitted with a GPS tracking device that is used by dispatchers to efficiently reach customers. The data is transmitted from each cab to a central receiving station, and then delivered in real-time to dispatch computers via a central server. This system broadcasts the cab call number, location and whether the cab currently has a fare. The cab locations are not stored by Yellow Cab, but only used in real-time to aid dispatch. Our system talks to the Yellow Cab server and stores the data in a database, encoding the call number for privacy. Server-side processes computer the aggregate map at various time intervals (10 minute, 1 hour, 8 hours, etc.) and store these frames as Postscript and bitmap images. These are subsequently combined into movies for every day, week, etc. Images and movies can be queried by visitors to the site in the Time Lapse area. A sample of real-time data overlaid on the most recent map can be seen in the Cab Tracker client.</p>
+        </div>
+      </div>
+      <!-- END ABOUT -->
+      
+      <!-- FAQ -->
+      <div class="section clearfix" data-href="/faq">
+        <h1>Frequently Asked Questions</h1>
+        <div class="left">
+          <h3>How does this work?</h3>
+          <p>Yellow Cab is one of a number of taxi companies which uses GPS technology to track the locations of their taxis as they drive around the city. Once every minute or so, each cab reports it's location to the central dispatch. As orders for pick ups come in over the phone, these addresses are automatically passed to drivers, depending on how close they are. This location data is usually discarded after being reported - but Yellow Cab has generously allowed us to capture this information over time, allowing the generation of the maps you see on this site. See the About page for more information.</p>
+          
+          <h3>How are you addressing privacy concerns with this project?</h3>
+          <p>Out of respect for the privacy of cab drivers and customers, no direct access to cab data with identifiable cab numbers is provided to the public or to our artists. The project emphasizes the analysis of aggregate data and data patterns, with most of this analysis happening on historic data and larger data patterns using scrambled cab numbers. Real-time information is limited to a small sample of random cabs. The display resolution is also limited to prevent tracking to and from individual addresses. We welcome comments and suggestions on how to restrict the system to a benevolent use of the data.</p>
+          
+          <h3>I would like to create an artist's project &ndash; how do I do it?</h3>
+          <p>You are welcome, and encouraged, to make your own interpretation or analysis of this data at any time and post it to your own website or blog. If you would like a link or a copy of your work included on this site, please contact the webmaster: <a href="mailto:info@stamen.com">info@stamen.com</a>.</p>
+          
+          <h3>I would like to create my own Cabspotting client &ndash; how do I do it?</h3>
+          <p>Please contact: <a href="mailto:info@stamen.com">info@stamen.com</a> for the instructions on writing to our API and for the open source Flash example client.</p>
+        </div>
+
+        <div class="right">
+          <h3>Do you have any good ideas for a project or client?</h3>
+          <p>
+              Why yes! Some suggestions are:
+              <ul>
+                <li> A client that correlates cab rides with zip code and average income to show the relationship between socioeconomic status and use of cabs using graphs, diagrams and narrative analysis of sociological and economic patterns.</li>
+                <li> Tracking an individual ride and documenting it with photos, drawings, sound recordings or video. Combine this information with the cab path extracted from the day's record to form a small portrait.</li>
+                <li> Examine the points where cabs rarely or never visit and explore why this is through photographs, interviews and historical research.</li>
+                <li> Examine the most frequently visited places (outside of airports and hotels) in a similar manner.</li>
+                <li> Showing all the cab rides that pass in front of a specific place during one day.</li>
+                <li> A client that warps the bay area map based on the frequency of cab visits, distorting the landscape to create a "cab-centric" view.</li>
+                <li> A client that highlights the most eccentric paths, such as the very short, long or circuitous.</li>
+                <li> Document earlier bay-area cab events and reconstruct them with the Cabspotting client. For example: "Mel Henderson did some terrific pieces in the '60s-one was a Yellow Cab piece, where we all hired a cab in San Francisco and went to a certain location at a certain hour. And all these cabs started converging, and the neighborhood became yellow. It was terrific. Too bad for anybody who was trying to get to the airport that day" (From conversation w/ Jim Melchert)</li>
+              </ul>
+          </p>
+        </div>
+      </div>
+      <!-- END FAQ -->
+      
+      <!-- PROJECTS -->
+      <div class="section clearfix" data-href="/projects">
+        <div class="left">
+          <h1>Featured Projects</h1>
+          <p>Artists and researchers use the Cabspotting data set to create projects that reveal larger trends, or focus on specific events. Projects are commissioned by the Exploratorium and also submitted by the general public. They can be as small as a photographic documentation of a single journey, or as large as a meta-analysis correlating zip code, census and voting data with the Cabspotting database. Some projects are a static collection of images and text, while others create new dynamic views using Flash, Java or other computation or animation techniques.</p>
+          
+          <div class="project">
+            <h3><a href="/projects/flycab/">Fly Cab</a></h3>
+            <p>
+              <a href="/projects/flycab/"><img width="370" border="0" alt="fly cab" src="http://cabspotting.org/projects/flycab/img/flycab-long.gif" /></a>
+              by <strong>Tomas Apodaca</strong><br />
+              It's easy to imagine a cab's movements around the city - but what if you want to look at patterns over time? This interactive flythrough of one cab's travels over the course of several days adds an extra dimension to your trip.
+            </p>
+          </div>
+          
+          <div class="project">
+            <h3><a href="/projects/intransit">In Transit</a></h3>
+            <p>
+              <a href="/projects/intransit"><img width="370" border="0" alt="intransit" src="http://cabspotting.org/projects/intransit/img/intransit-long.jpg" /></a>
+              by <strong>Amy Balkin</strong><br />
+              In Transit uses the GPS data trails drawn by cabs as a starting point for looking at the city, and trying to find and make social sense of patterns that emerge visually from the data.
+            </p>
+          </div>
+        </div>
+
+        <div class="right">
+          <h2>Timelapse Projects</h2>
+          <p>Viewed over time, the routes taken by taxis in San Francisco ebb and flow, revealing patterns of movement out of and into downtown and outlying areas. By viewing the Cabspotting data in this way, the city comes alive. The rhythms of commuters, airport arrivals, traffic jams, accidents, and special events become patterns which bear a strange resemblance to circulatory systems in our own bodies.</p>
+
+          <p>We will continue to post new animations periodically as our team and contributing artists work with the growing data set. <a href="mailto:info@stamen.com">Contact us</a> if you would like access to the underlying data or have suggestions for other timelapse visualizations you may be interested in seeing.</p>
+          
+          <p><strong>Caution: Some of these files are quite large (8mb), and can cause problems in some browsers.</strong></p>
+          
+          <div class="project">
+            <h3>Intersections</h3>
+            <p>Each cab's path is represented by a series of crosses. The faster the taxi is going, the larger the size of the cross.</p>
+            
+            <p>
+              <a href="http://cabspotting.org/crosses-bay12hr.html"><img width="370" border="0" src="http://cabspotting.org/movies/crosses-bay4hr.jpg" /></a>
+              <span class="caption">Bay Area, Twelve Hours</span>
+            </p>
+            
+            <p>
+              <a href="http://cabspotting.org/crosses-sf4hr02.html"><img width="370" border="0" src="http://cabspotting.org/movies/crosses-sf4hr02.jpg" /></a>
+              <span class="caption">San Francisco, Four Hours, 30 minute lines:</span>
+            </p>
+          </div>
+          
+          <div class="project">
+            <h3>Speed Overlay</h3>
+            <p>Each cab's path is represented by a line. The color of the line depends on the speed of the taxi - red is fast, white is slow.</p>
+            
+            <p>
+              <a href="http://cabspotting.org/lines-sf4hr.html"><img width="370" border="0" src="http://cabspotting.org/movies/lines-sf4hr.jpg" /></a>
+              <span class="caption">Four hours of activity</span>
+            </p>
+          </div>
+          
+        </div>
+      </div>
+      <!-- END PROJECTS -->
+    </div>
+  </div>
+
+  <iframe id="map-frame" src="map.html"></iframe>
+
+  <script src="jquery.js"></script>
+  <script src="jquery.ba-bbq.min.js"></script>
+  <script src="cabspotting.js"></script>
+</body>
+</html>

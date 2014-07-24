@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cabspotting</title>
+  {{& javascripts}}
+  {{& stylesheets}}
+</head>
+<body>
+  <div id="frame">
+    <div id="menu" class="clearfix">
+      <div class="home">
+        <a href="/">Cabspotting</a>
+      </div>
+      <a href="/about">About</a>
+      <a href="/faq">FAQ</a>
+      <a href="/projects">Artist Projects</a>
+
+      <small class="partners">Brought to you by <a href="#">The Exploratorium</a>, <a href="#">Yellow Cab</a>, and <a href="#">Stamen Design</a></small>
+    </div>
+
+    <div id="content" class="clearfix">
+      <!-- <a class="close">&#9650;</a> -->
+      <a class="close">X</a>
+      
+      {{& yield}}
+    </div>
+  </div>
+  
+  <iframe id="map-frame" src="map.html"></iframe>
+</body>
+</html>
